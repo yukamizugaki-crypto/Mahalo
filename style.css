@@ -1,0 +1,529 @@
+/* Design System for Mahalo */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-brown: #5d4037;
+    --secondary-brown: #8d6e63;
+    --accent-wood: #a1887f;
+    --light-bg: #faf3e0;
+    --text-dark: #3e2723;
+    --text-light: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+}
+
+/* Base Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-brown);
+}
+
+/* Specific Section Title Colors */
+.rooms .section-title::after {
+    background-color: white;
+}
+
+/* Button Styles */
+.btn-call {
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-call:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: var(--primary-brown) !important;
+    color: white !important;
+    border-color: white;
+}
+
+/* Image Placeholders */
+.img-placeholder {
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Wood Grain Aesthetic */
+.wood-texture {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero1.jpg'); /* Updated hero image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-light);
+}
+
+.wood-texture-light {
+    background-color: #f5e6d3;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    opacity: 0.8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-brown);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-brown);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    height: 100svh; /* 100vh問題を解決し、スクロールインジケーターを確実に画面内に収める */
+    background-color: #ddd; /* Placeholder color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.35); /* 写真がしっかり透けて見える薄さを維持しつつ視認性を確保 */
+    backdrop-filter: blur(6px); /* ぼかしを程よく効かせて文字の背景を整理 */
+    padding: 35px 45px;
+    border-radius: 16px;
+    max-width: 560px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: var(--text-dark);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--primary-brown);
+    letter-spacing: 6px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    text-shadow: 0 0 15px #ffffff, 0 0 5px #ffffff; /* 二重の白い光彩（グロー効果）で文字をくっきり浮き立たせる */
+}
+
+.hero-content p {
+    font-size: 1.05rem; /* 文字サイズを少し大きくして見やすく */
+    line-height: 1.8;
+    font-weight: 700; /* 太字にして可読性を劇的に向上 */
+    color: var(--text-dark);
+    text-shadow: 0 0 10px #ffffff, 0 0 3px #ffffff; /* 二重の白い光彩で視認性を劇的にアップ */
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 25px; /* 少し上に上げて画面内に確実に収める */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff !important; /* 強制的に白文字にする */
+    font-size: 0.9rem; /* 文字を少し大きく */
+    letter-spacing: 3px; /* 文字間隔を広げて高級感を出す */
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 100; /* ヘッダーや背景に隠れないよう十分高い値を設定 */
+    cursor: pointer;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9); /* 影を強化して視認性を劇的に向上 */
+    transition: var(--transition);
+}
+
+.scroll-indicator:hover {
+    opacity: 0.85;
+    transform: translateX(-50%) translateY(2px);
+}
+
+.scroll-indicator span {
+    margin-bottom: 8px;
+    animation: pulse 2s infinite;
+}
+
+.scroll-indicator .arrow {
+    width: 14px;
+    height: 14px;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    transform: rotate(45deg);
+    animation: bounce-arrow 2s infinite;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+@keyframes bounce-arrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    40% {
+        transform: translateY(-8px) rotate(45deg);
+    }
+    60% {
+        transform: translateY(-4px) rotate(45deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Message Section */
+.message {
+    background-color: #fff;
+    position: relative;
+}
+
+.message::before {
+    content: '"';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    color: #eee;
+    font-family: serif;
+}
+
+.message-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 2.2;
+    position: relative;
+    z-index: 1;
+}
+
+/* Features Section */
+.features {
+    background-color: var(--light-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--primary-brown);
+}
+
+/* Commitment Section */
+.commitment {
+    padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+    .commitment div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Info Section */
+.info {
+    background-color: #fff;
+}
+
+.info-details table tr:last-child th, 
+.info-details table tr:last-child td {
+    border-bottom: none;
+}
+
+.info-details th {
+    font-weight: 700;
+    color: var(--primary-brown);
+    background-color: rgba(93, 64, 55, 0.05);
+}
+
+.rooms-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.room-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.room-info p {
+    margin-bottom: 10px;
+}
+
+/* Info Section */
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.info-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-details th, .info-details td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-details th {
+    width: 150px;
+    color: var(--primary-brown);
+}
+
+.map-container {
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-brown);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 25px 12px; /* スマホ向けに左右のパディングをさらに狭めて、文字の表示幅を最大化 */
+        max-width: 96%; /* 画面幅に対して美しくフィットさせる */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: clamp(11px, 3.6vw, 15px);
+        line-height: 2.0;
+        word-break: keep-all;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .message-text {
+        font-size: 0.8rem; /* スマホの最小画面でも絶対に自動改行が起きず、指定通りの3行になるようにサイズ調整 */
+        line-height: 2.2;
+        padding: 0 10px;
+        word-break: keep-all;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .rooms-content, .info-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .info-details th {
+        width: 100px;
+        font-size: 0.9rem;
+    }
+    
+    .info-details td {
+        font-size: 0.9rem;
+    }
+}
+
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-img.active {
+    opacity: 1;
+}
+
+.commitment-slider {
+    aspect-ratio: 4/3;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.rooms-slider {
+    height: 100%;
+    min-height: 350px;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahalo | 佐倉駅徒歩3分 手作りの味わいと温かな空間</title>
+    <meta name="description" content="佐倉駅徒歩3分。オーナーが真心込めて仕立てる手作りの味わい。カラオケ、宴会も対応。心ほどけるひとときをMahaloで。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css?v=1.0.4">
+    
+    <!-- Cache-proof Responsive Style Override -->
+    <style>
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 25px 12px !important;
+                max-width: 96% !important;
+            }
+            .hero-content p {
+                /* clampとvwを使用し、画面幅に合わせて文字サイズを自動無段階スケーリング。絶対に自動改行させない極意 */
+                font-size: clamp(11px, 3.6vw, 15px) !important;
+                line-height: 2.0 !important;
+                word-break: keep-all !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="ロゴ.jpg" alt="Mahalo Logo" style="height: 50px; width: auto; vertical-align: middle;">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#message">Message</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#info">Access</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero wood-texture">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Mahalo</h1>
+                    <p>オーナーが真心込めて仕立てる、<br>
+                    毎日変わる手作りの味わい。<br>
+                    新しい美味しさに出会える温かな空間で、<br>
+                    心ほどけるひとときを。</p>
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <a href="#message" class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="arrow"></div>
+            </a>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message" class="message">
+            <div class="container">
+                <h2 class="section-title">Message</h2>
+                <div class="message-text">
+                    <p>Mahaloへようこそ。<br>
+                    アットホームな雰囲気の店内で、日常の喧騒を忘れ、<br>
+                    真心込めた手作り料理をお楽しみください。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commitment Section -->
+        <section id="commitment" class="commitment" style="background-color: #fff; padding-top: 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div class="slider-container commitment-slider" id="menu-slider">
+                        <img src="menu1.webp" class="slider-img active" alt="Menu 1">
+                        <img src="menu2.png" class="slider-img" alt="Menu 2">
+                        <img src="menu3.png" class="slider-img" alt="Menu 3">
+                    </div>
+                    <div>
+                        <h2 style="font-family: 'Noto Serif JP', serif; color: var(--primary-brown); font-size: 2rem; margin-bottom: 20px;">心づくしの手作り料理</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                            Mahaloの料理はすべてママの手作り。既製品は使わず、一品一品真心込めて手作りしています。
+                        </p>
+                        <p style="font-size: 1.1rem; line-height: 1.8;">
+                            厳選された旬の食材を使用し、その日その時で最高の味わいを楽しんでいただけるよう、メニューは毎日変わります。新しい美味しさとの出会いをお楽しみください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Our Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-utensils fa-3x" style="color: var(--primary-brown);"></i>
+                        <h3>ママの手作り料理</h3>
+                        <p>料理はすべてママの手作り。家庭的な温かさと、素材を活かした深い味わいが自慢です。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-leaf fa-3x" style="color: var(--primary-brown);"></i>
+                        <h3>食材へのこだわり</h3>
+                        <p>新鮮で良質な食材を厳選。安心・安全で美味しい一皿をお届けします。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-fire fa-3x" style="color: var(--primary-brown);"></i>
+                        <h3>通年で楽しむ鍋料理</h3>
+                        <p>火鍋、あんこう鍋、もつ鍋、すき焼きなど、季節を問わず様々な鍋料理をご用意しております。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms Section -->
+        <section id="rooms" class="rooms wood-texture">
+            <div class="container">
+                <h2 class="section-title" style="color: white; border-color: white;">Rooms & Events</h2>
+                <div class="rooms-content">
+                    <div class="slider-container rooms-slider" id="karaoke-slider">
+                        <img src="カラオケ1.jpg" class="slider-img active" alt="Karaoke 1">
+                        <img src="カラオケ2.jpg" class="slider-img" alt="Karaoke 2">
+                        <img src="カラオケ3.jpg" class="slider-img" alt="Karaoke 3">
+                    </div>
+                    <div class="room-info">
+                        <h3>カラオケ & 宴会</h3>
+                        <p style="font-size: 1.2rem; margin-bottom: 20px;">木目調の落ち着いた雰囲気の中で、大切な仲間と楽しいひとときをお過ごしください。</p>
+                        
+                        <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.3);">
+                            <h4 style="margin-bottom: 10px; border-left: 4px solid white; padding-left: 10px;">カラオケ</h4>
+                            <p><strong>〜20名様まで（事前予約制）</strong><br>二次会や打ち上げ、歌って飲める楽しい空間です。</p>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.3);">
+                            <h4 style="margin-bottom: 10px; border-left: 4px solid white; padding-left: 10px;">宴会・パーティー</h4>
+                            <p><strong>〜25名様まで</strong>（事前予約制）<br>ママの手作り料理で囲む、温かい宴会をプロデュースします。</p>
+                        </div>
+
+                        <div style="margin-top: 40px;">
+                            <p style="margin-bottom: 15px; font-weight: bold;">ご予約・お問い合わせはお電話で</p>
+                            <a href="tel:080-7666-0129" class="btn-call" style="background: white; color: var(--primary-brown); padding: 18px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; font-size: 1.2rem;">
+                                <i class="fas fa-phone-alt"></i> 080-7666-0129
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Info & Access Section -->
+        <section id="info" class="info">
+            <div class="container">
+                <h2 class="section-title">Shop Information</h2>
+                <div class="info-section">
+                    <div class="info-details">
+                        <table>
+                            <tr>
+                                <th>正式名称</th>
+                                <td>Mahalo</td>
+                            </tr>
+                            <tr>
+                                <th>所在地</th>
+                                <td>〒285-0811<br>千葉県佐倉市表町1丁目10-6</td>
+                            </tr>
+                            <tr>
+                                <th>電話番号</th>
+                                <td>080-7666-0129<br><small>※ご予約はお電話からお願いいたします。</small></td>
+                            </tr>
+                            <tr>
+                                <th>営業時間</th>
+                                <td>17:00 ～ 24:00</td>
+                            </tr>
+                            <tr>
+                                <th>ランチ営業</th>
+                                <td>水 ～ 土<br>11:30 ～ 14:00</td>
+                            </tr>
+                            <tr>
+                                <th>アクセス</th>
+                                <td>佐倉駅より徒歩3分</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.3797682352815!2d140.22045357626154!3d35.70950127257787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228f1cfa05253f%3A0x645bc986ea8b2a8f!2sMahalo!5e0!3m2!1sja!2sjp!4v1715848419615!5m2!1sja!2sjp" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mahalo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
